@@ -1,0 +1,341 @@
+@charset "UTF-8";    /* 文字コードの指定 */
+
+@import 'https://fonts.googleapis.com/css?family=Abel';    /* Google Fonts用のCSSを読み込み */
+
+html
+{
+    font-size: 62.5%;    /* html全体にかかるプロパティ　フォントサイズ調整 */
+}
+
+body
+{
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;    /*ページで使うフォントプロパティ　複数記入すること */
+    font-size: 1.4rem;    /* rem=htmlで指定したフォントサイズに対する割合　em=親要素で指定したフォントサイズに対する割合 */
+    line-height: 1.6;    /* line-height = 行の高さ　高さ20pxで文字サイズ16pxの場合、20-16=4pxが行間となる */
+    letter-spacing: .1em;    /* letter-spacing = カーニング */
+    color: #333; /* 文字カラー */
+    background-color: #fcfaf2;    /* 背景カラー　胡粉色 */
+}
+
+a
+{
+    text-decoration: none;    /* リンクの下線なし */
+
+    color: #14c0c9;    /* リンク文字カラー */
+}
+a:visited
+{
+    color: #0f949b;    /* a:visited = 訪問済みのリンク */
+}
+a:hover
+{
+    color: #0f949b;
+    text-decoration: underline;    /* a:hover = リンクにマウスを乗せた状態 */
+}
+a:active
+{
+    color: #16d6e0;    /* a:active = リンクをクリックした状態 */
+}
+
+.text-center
+{
+    text-align: center;    /* テキスト位置を決めるプロパティ */
+}
+
+.block-center,
+section .container,    /* <section>内の.containerセレクタにのみかかる　#はidセレクタ*/
+#skills i
+{
+    display: block;    /* display = 表示形式指定　block = 親要素と同じサイズのブロック形成 */
+    margin-right: auto;    /* margin = 上下左右に隣接する別ボックスまでの距離 */
+    margin-left: auto;
+}
+
+.abel,
+section h2,
+#skills h3,
+#works .works-box a .works-box-inner .button-readmore
+{
+    font-family: 'Abel', sans-serif;
+}
+
+.uppercase,
+section h2,
+#skills h3,
+#works .works-box a .works-box-inner .button-readmore
+{
+    text-transform: uppercase;    /* text-transform = 英字を大文字小文字どちらで表示するか指定するプロパティ　uppercase = すべて大文字表記 */
+}
+
+.button-contact
+{
+    font-size: 20px;
+    line-height: 0;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 20px 20px 0 0;
+    padding: 10px;
+    text-align: center;
+    color: #0b346e;
+    border: 2px solid #0b346e;
+    -webkit-border-radius: 30%;
+       -moz-border-radius: 30%;
+            border-radius: 30%;
+}
+.button-contact:visited
+{
+    color: #0b346e;
+}
+.button-contact:hover,
+.button-contact:active
+{
+    color: #fcfaf2;
+    background-color: #0b346e;
+}
+
+header .profile
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    clear: both;
+    display: -webkit-flex;
+    display: flex;
+}
+header .profile-photo
+{
+    width: 30%;
+    float: left;
+}
+header .site-title
+{
+    font-size: 1.8rem;
+    display: block;
+    line-height: normal;
+}
+header .site-title span
+{
+    font-size: 4.2rem;
+    display: block;
+    color: #0b346e;    /* 瑠璃紺色 */
+}
+header .profile-icon
+{
+    margin: 30px auto 0px;
+    -webkit-border-radius: 30%;
+       -moz-border-radius: 30%;
+            border-radius: 30%;
+}
+header p
+{
+    width: 70%;
+    margin: auto 0;
+    padding: 0 50px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    float: left;
+}
+header::after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section
+{
+    padding: 60px 0;
+}
+section .container
+{
+    width: 90%;
+}
+section h2
+{
+    font-size: 3.2rem;
+}
+
+#skills
+{
+    background-color: #f596aa;    /* 桃色 */
+}
+#skills .container
+{
+    display: -webkit-flex;
+    display:         flex;
+    justify-content: space-between;
+}
+#skills h2
+{
+    margin-bottom: 60px;
+    color: #fff;
+}
+#skills .skill-box
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-flex: 1;
+            flex: 1;
+    margin: 0px 10px;
+    padding: 20px;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #fdfcf6;
+}
+#skills i
+{
+    font-size: 5rem;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 30%;
+       -moz-border-radius: 30%;
+            border-radius: 30%;
+    background-color: #0b346e;
+}
+#skills h3
+{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0b346c;
+}
+
+#works
+{
+    padding-bottom: 0;
+}
+#works h2
+{
+    margin-bottom: 50px;
+}
+#works .works-box
+{
+    float: left;
+    width: 33.33333%;
+    height: 100%;
+}
+
+#works .works-box a
+{
+    position: relative;
+    display: block;
+}
+#works .works-box a .works-box-inner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+}
+#works .works-box a .works-box-inner div
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    margin: auto;
+    padding: 10px 20px;
+}
+#works .works-box a .works-box-inner h3
+{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+#works .works-box a .works-box-inner small
+{
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 15px;
+}
+#works .works-box a .works-box-inner .button-readmore
+{
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    width: 180px;
+    margin: auto;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #f596aa;
+}
+#works .works-box a .works-box-inner .button-readmore:hover
+{
+    background-color: #e16bbc;    /* 紅梅色 */
+}
+#works .works-box a:hover .works-box-inner
+{
+    display: block;
+    width: 100%;
+}
+#works .works-box img
+{
+    display: block;
+    max-width: 100%;
+}
+
+#works::after
+{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+#contact ul
+{
+    margin-top: 60px;
+    text-align: center;
+}
+#contact ul li
+{
+    font-size: 3rem;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 20px;
+    text-align: center;
+}
+#contact ul a
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    -webkit-border-radius: 30%;
+       -moz-border-radius: 30%;
+            border-radius: 30%;
+    background-color: #0b346e;
+}
+#contact ul a:hover
+{
+    background-color: #211e55;    /* 紺桔梗色 */
+}
+
+footer
+{
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #f596aa;
+}
